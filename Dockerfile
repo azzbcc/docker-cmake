@@ -6,6 +6,6 @@ RUN \
     # 启用CRB源
     dnf config-manager --enable crb && \
     # 安装常用软件
-    dnf install gcc cmake pkgconf check-devel uthash-devel valgrind ninja-build -y
+    dnf install gcc cmake pkgconf check-devel uthash-devel valgrind ninja-build libasan libubsan -y
 
 CMD ["cmake"]
