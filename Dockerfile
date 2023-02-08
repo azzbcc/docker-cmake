@@ -4,6 +4,8 @@ LABEL maintainer="Clarence <xjh.azzbcc@gmail.com>"
 RUN \
     dnf install epel-release -y && \
     # 安装常用软件
-    dnf install gcc cmake pkgconf check-devel uthash-devel valgrind libasan libubsan -y
+    dnf install gcc cmake pkgconf check-devel uthash-devel valgrind libasan libubsan -y && \
+    # 磁盘清理
+    dnf clean all
 
 CMD ["cmake"]
